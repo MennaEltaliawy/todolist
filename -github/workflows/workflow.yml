@@ -1,0 +1,29 @@
+name : Github pages deploy
+
+on :
+  push :
+    branches :
+      "main"
+
+jobs :
+  build :
+    runs-on : windows10
+
+
+strategy :
+  matrix :
+  node-version : [16.13.0]
+
+
+    steps: 
+    name : checkout 
+    uses : actions/checkout@v1
+
+    name : install and build
+    run : npm install && npm run build
+
+    name : deploy 
+    uses : jamesIves/github-pages-deploy-action@4.1.1
+    with :
+      branch : gh-pages 
+      folder : build

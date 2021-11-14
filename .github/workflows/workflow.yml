@@ -3,7 +3,7 @@ name : Github pages deploy
 on :
   push :
     branches :
-      "main"
+  -    "main"
 
 jobs :
   build :
@@ -12,18 +12,18 @@ jobs :
 
 strategy :
   matrix :
-  node-version : [16.13.0]
+  node-version : [16.x]
 
 
     steps: 
-    name : checkout 
+  -  name : Checkout 
     uses : actions/checkout@v1
 
-    name : install and build
+  -  name : Install and build
     run : npm install && npm run build
 
-    name : deploy 
-    uses : jamesIves/github-pages-deploy-action@4.1.1
+   - name : Deploy 
+    uses : JamesIves/github-pages-deploy-action@4.1.1
     with :
       branch : gh-pages 
       folder : build

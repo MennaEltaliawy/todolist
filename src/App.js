@@ -7,8 +7,8 @@ function App ()  {
   return (
     
       <div>
-          <Todolist/>
-          <Additem />
+        
+        <Todolist />
         </div>
       
   );

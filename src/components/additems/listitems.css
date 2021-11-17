@@ -1,0 +1,33 @@
+.List{
+    color: #fff;
+    width: 300px;
+    margin: 20px auto;
+    height: 50px;
+    background-color: #0c0c0c;
+    border-radius: 5px;
+}
+.List p {
+    padding: 10px;
+    position: relative;
+    transition: ease-in-out;
+}
+.List p span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.List p input{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.List p input:focus{
+    outline: none;
+}
+
+ .iconn {
+    font-size: 15px;
+    margin: 0 5px;
+}
